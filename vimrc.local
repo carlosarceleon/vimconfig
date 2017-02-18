@@ -1,0 +1,8 @@
+autocmd BufNewFile,BufRead *.tex set spell
+autocmd BufNewFile,BufRead *.tex set wrap
+autocmd BufNewFile,BufRead *.tex let g:AutoPairs = {}
+let g:Tex_ViewRule_pdf = 'qpdfview'
+let g:tex_conceal = ""
+set guifont=Ubuntu\ Mono\ Regular\ 12
+let g:neocomplcache_disable_auto_complete = 1
+let g:spf13_bundle_groups=['general', 'writing', 'YouCompleteMe', 'programming', 'python', 'misc',]
