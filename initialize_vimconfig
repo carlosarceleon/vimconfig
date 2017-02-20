@@ -1,5 +1,10 @@
+rm ~/.vimrc.bundles.local ~/.vimrc.local ~/.vimrc.before.local
+
+ln -s $HOME/.vimdotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
+ln -s $HOME/.vimdotfiles/vimrc.local $HOME/.vimrc.local
+ln -s $HOME/.vimdotfiles/vimrc.before.local $HOME/.vimrc.before.local
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
-ln -s $HOME/.vim/vimrc.bundles.local $HOME/.vimrc.bundles.local
-ln -s $HOME/.vim/vimrc.local $HOME/.vimrc.local
-ln -s $HOME/.vim/vimrc.before.local $HOME/.vimrc.before.local
+ln -s $HOME/.vimdotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
+ln -s $HOME/.vimdotfiles/vimrc.local $HOME/.vimrc.local
+ln -s $HOME/.vimdotfiles/vimrc.before.local $HOME/.vimrc.before.local
 vim +BundleInstall! +BundleClean!
