@@ -1,3 +1,11 @@
 UnBundle 'amirh/HTML-AutoCloseTag'
 Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Valloric/YouCompleteMe'
+
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "dota"
+    Bundle 'Valloric/YouCompleteMe'
+elseif hostname == "fluffy"
+    UnBundle 'Valloric/YouCompleteMe'
+else
+    Bundle 'Valloric/YouCompleteMe'
+endif
