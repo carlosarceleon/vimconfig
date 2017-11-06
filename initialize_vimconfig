@@ -1,5 +1,7 @@
 rm ~/.vimrc.bundles.local ~/.vimrc.local ~/.vimrc.before.local
 
+mkdir $HOME/.vimdotfiles
+
 ln -s $HOME/.vimdotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
 ln -s $HOME/.vimdotfiles/vimrc.local $HOME/.vimrc.local
 ln -s $HOME/.vimdotfiles/vimrc.before.local $HOME/.vimrc.before.local
