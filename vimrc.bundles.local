@@ -9,3 +9,4 @@ elseif hostname == "fluffy"
 else
     Bundle 'Valloric/YouCompleteMe'
 endif
+Bundle 'vim-scripts/django.vim'
