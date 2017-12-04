@@ -1,12 +1,21 @@
+/*Remove linked files, if they exist*/
 rm ~/.vimrc.bundles.local ~/.vimrc.local ~/.vimrc.before.local
 
+/*Make the intermediate file directory, if it exists*/
 mkdir $HOME/.vimdotfiles
 
-ln -s $HOME/.vimdotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
-ln -s $HOME/.vimdotfiles/vimrc.local $HOME/.vimrc.local
-ln -s $HOME/.vimdotfiles/vimrc.before.local $HOME/.vimrc.before.local
+/*Link the local config files to an intermediate folder*/
+ln -s vimrc.bundles.local $HOME/.vimdotfiles/vimrc.bundles.local
+ln -s vimrc.local $HOME/.vimdotfiles/vimrc.local
+ln -s vimrc.before.local $HOME/.vimdotfiles/vimrc.before.local
+
+/*Download the prescribed config from spf13*/
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+
+/*Link the intermediate-folder local config files to where vim can find them*/
 ln -s $HOME/.vimdotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
 ln -s $HOME/.vimdotfiles/vimrc.local $HOME/.vimrc.local
 ln -s $HOME/.vimdotfiles/vimrc.before.local $HOME/.vimrc.before.local
+
+/*Install bundles*/
 vim +BundleInstall! +BundleClean!
