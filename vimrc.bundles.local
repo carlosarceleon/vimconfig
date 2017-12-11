@@ -1,5 +1,7 @@
 UnBundle 'amirh/HTML-AutoCloseTag'
 Bundle 'fholgado/minibufexpl.vim'
+UnBundle 'klen/python-mode'
+Bundle 'python-mode/python-mode'
 
 let hostname = substitute(system('hostname'), '\n', '', '')
 if hostname == "dota"
@@ -9,4 +11,8 @@ elseif hostname == "fluffy"
 else
     Bundle 'Valloric/YouCompleteMe'
 endif
-Bundle 'vim-scripts/django.vim'
+UnBundle 'vim-scripts/django.vim'
+UnBundle 'tweekmonster/django-plus.vim'
+
+Bundle 'Konfekt/FastFold'
+Bundle 'tmhedberg/SimpylFold'
